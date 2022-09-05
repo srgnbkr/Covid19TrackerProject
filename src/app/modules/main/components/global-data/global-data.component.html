@@ -1,0 +1,80 @@
+<div class="block-content">
+  <div class="ng-star-inserted">
+    <div class="px-4 py-5 md:px-6 lg:px-8">
+      <div class="grid">
+        <div class="col-12 md:col-6 lg:col-3 p-3">
+          <div class="p-3 text-center bg-red-700" style="border-radius: 12px">
+            <span
+              class="inline-flex justify-content-center align-items-center bg-red-800 border-circle mb-3"
+              style="width: 49px; height: 49px"
+              ><i class="pi pi-globe text-xl text-white"></i
+            ></span>
+            <div class="text-2xl font-medium text-white mb-2">
+              {{ summaryData?.Global.TotalDeaths | number }}
+            </div>
+            <span class="text-blue-100 font-medium">Toplam Ölüm</span>
+          </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-3 p-3">
+          <div
+            class="p-3 text-center bg-purple-500"
+            style="border-radius: 12px"
+          >
+            <span
+              class="inline-flex justify-content-center align-items-center bg-purple-600 border-circle mb-3"
+              style="width: 49px; height: 49px"
+              ><i class="pi pi-slack text-xl text-white"></i
+            ></span>
+            <div class="text-2xl font-medium text-white mb-2">
+              {{ summaryData?.Global?.TotalConfirmed | number }}
+            </div>
+            <span class="text-purple-100 font-medium">Toplam Vaka Sayısı</span>
+          </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-3 p-3">
+          <div
+            class="p-3 text-center bg-indigo-500"
+            style="border-radius: 12px"
+          >
+            <span
+              class="inline-flex justify-content-center align-items-center bg-indigo-600 border-circle mb-3"
+              style="width: 49px; height: 49px"
+              ><i class="pi pi-info-circle text-xl text-white"></i
+            ></span>
+            <div class="text-2xl font-medium text-white mb-2">
+              {{ summaryData?.Global?.NewConfirmed | number }}
+            </div>
+            <span class="text-indigo-100 font-medium">Yeni Vaka Sayısı</span>
+          </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-3 p-3">
+          <div
+            class="p-3 text-center bg-orange-500"
+            style="border-radius: 12px"
+          >
+            <span
+              class="inline-flex justify-content-center align-items-center bg-orange-600 border-circle mb-3"
+              style="width: 49px; height: 49px"
+              ><i class="pi pi-users text-xl text-white"></i
+            ></span>
+            <div class="text-2xl font-medium text-white mb-2">
+              {{ summaryData?.Global?.NewDeaths | number }}
+            </div>
+            <span class="text-orange-100 font-medium">Yeni Vefat Edenler</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div
+        class="flex flex-wrap align-items-center justify-content-center card-container blue-container"
+      >
+        <div
+          class="transition-colors transition-duration-500 bg-blue-500 hover:bg-yellow-500 text-white hover:text-gray-900 flex align-items-center justify-content-center font-bold border-round cursor-pointer m-2 px-5 py-3"
+        >
+          Ülkelere Göre Vere Verilere Göz At
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
