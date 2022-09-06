@@ -8,6 +8,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/main/main.module').then((m) => m.MainModule),
   },
+  {
+    path:'tables',
+    loadChildren: () =>
+      import('./modules/table-list/table-list.module').then(
+        (m) => m.TableListModule
+      ),
+  },
 ];
 
 @NgModule({

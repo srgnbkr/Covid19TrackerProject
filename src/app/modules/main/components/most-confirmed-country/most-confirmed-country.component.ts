@@ -5,7 +5,13 @@ import { SummaryData } from 'src/app/models/summaryData';
 
 @Component({
   selector: 'app-most-confirmed-country',
-  template: `<p-chart type="bar" [data]="chartData"></p-chart>`,
+  template: ` <p-chart
+    type="bar"
+    [data]="chartData"
+    width="47vw"
+    height="40vh"
+
+  ></p-chart>`,
   styleUrls: ['./most-confirmed-country.component.scss'],
 })
 export class MostConfirmedCountryComponent implements OnInit {
@@ -46,7 +52,7 @@ export class MostConfirmedCountryComponent implements OnInit {
               '#7E57C2',
               '#66BB6A',
               '#FFCA28',
-              '#26A69A'
+              '#26A69A',
             ],
             data: this.chartConfirmedData,
           },

@@ -12,11 +12,13 @@ import { AppComponent } from './app.component';
 import { MenuBarComponent } from './sharedComponents/menu-bar/menu-bar.component';
 import { FooterComponent } from './sharedComponents/footer/footer.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MenuBarComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { FooterComponent } from './sharedComponents/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MenubarModule
+    MenubarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

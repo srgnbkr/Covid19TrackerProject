@@ -10,8 +10,10 @@ import { CountryDetailData } from 'src/app/models/countryDetailData';
       [data]="chartData"
       [responsive]="true"
       [options]="basicOptions"
+      width="47vw"
+      height="40vh"
     >
-  </p-chart>
+    </p-chart>
   `,
   styleUrls: ['./last-month-country-data.component.scss'],
 })
