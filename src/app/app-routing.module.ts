@@ -10,15 +10,12 @@ const routes: Routes = [
       import('./modules/main/main.module').then((m) => m.MainModule),
   },
   {
-    path:'tables',
+    path: 'tables',
     loadChildren: () =>
       import('./modules/table-list/table-list.module').then(
         (m) => m.TableListModule
       ),
   },
-  {
-    path:'**',component:NotFoundComponent
-  }
 ];
 
 @NgModule({
