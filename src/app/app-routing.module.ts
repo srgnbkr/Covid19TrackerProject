@@ -16,6 +16,10 @@ const routes: Routes = [
         (m) => m.TableListModule
       ),
   },
+  {
+    path: '**',
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({
