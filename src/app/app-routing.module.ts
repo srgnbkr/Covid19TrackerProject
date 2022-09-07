@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './sharedComponents/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,6 +16,9 @@ const routes: Routes = [
         (m) => m.TableListModule
       ),
   },
+  {
+    path:'**',component:NotFoundComponent
+  }
 ];
 
 @NgModule({

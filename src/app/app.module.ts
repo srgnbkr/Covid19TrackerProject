@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuBarComponent } from './sharedComponents/menu-bar/menu-bar.component';
 import { FooterComponent } from './sharedComponents/footer/footer.component';
+import { NotFoundComponent } from './sharedComponents/not-found/not-found.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FooterComponent } from './sharedComponents/footer/footer.component';
     AppComponent,
     MenuBarComponent,
     FooterComponent,
+    NotFoundComponent,
 
   ],
   imports: [
