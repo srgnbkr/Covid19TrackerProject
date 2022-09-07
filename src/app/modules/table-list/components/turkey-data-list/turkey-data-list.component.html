@@ -19,6 +19,8 @@
       [rowsPerPageOptions]="[10, 20, 30]"
       [value]="turkeyDataList"
       [exportHeader]="'customExportHeader'"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="{totalRecords} Veri içinden {first} ile {last} arasındakiler gösteriliyor "
     >
       <ng-template pTemplate="caption">
         <div class="flex">
