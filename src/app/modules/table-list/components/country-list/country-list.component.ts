@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CountryListComponent implements OnInit {
   summaryData: SummaryData;
   filterText='';
+  dataLoaded=false;
 
   constructor(private sumamryDataService: SummaryDataService) {}
 
@@ -20,6 +21,7 @@ export class CountryListComponent implements OnInit {
   getAllData() {
     this.sumamryDataService.getSummaryData().subscribe((response) => {
       this.summaryData = response;
+      this.dataLoaded = true;
     });
   }
 }

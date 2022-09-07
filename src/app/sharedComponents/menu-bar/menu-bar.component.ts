@@ -26,11 +26,12 @@ export class MenuBarComponent implements OnInit {
       {
         label: 'Ülkeler',
         icon: 'pi pi-flag-fill',
-        routerLink:['tables/country-list-data']
+        routerLink:['tables/country-data-list']
       },
       {
         label: 'Türkiye İçin Covid19',
         icon: 'pi pi-globe',
+        routerLink:['tables/turkey-data-list']
       },
     ];
   }

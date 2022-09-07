@@ -1,4 +1,13 @@
-<span
+
+<p-progressSpinner
+class="flex align-items-center justify-content-center"
+[style]="{ width: '250px', height: '600px' }"
+*ngIf="dataLoaded == false"
+>
+</p-progressSpinner>
+
+<div *ngIf="dataLoaded==true">
+  <span
   class="flex-initial flex align-items-center mt-3 justify-content-center bg-blue-500 font-bold text-white px-5 py-3 border-round"
   >Tüm Ülkelere Ait Toplam Covid19 Verileri
  </span>
@@ -14,6 +23,8 @@
     [responsive]="true"
     styleClass="p-datatable-customers p-datatable-gridlines"
     [exportHeader]="'customExportHeader'"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="{totalRecords} Ülke içinden {first} ile {last} arasındakiler gösteriliyor "
   >
     <ng-template pTemplate="caption">
       <div class="p-d-flex">
@@ -64,4 +75,5 @@
     </ng-template>
     <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
   </p-table>
+</div>
 </div>

@@ -11,7 +11,7 @@ import { CountryDetailData } from 'src/app/models/countryDetailData';
       [responsive]="true"
       [options]="basicOptions"
       width="47vw"
-      height="40vh"
+      height="45vh"
     >
     </p-chart>
   `,

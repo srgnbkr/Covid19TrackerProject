@@ -9,7 +9,7 @@ import { SummaryData } from 'src/app/models/summaryData';
     type="bar"
     [data]="chartData"
     width="47vw"
-    height="40vh"
+    height="45vh"
 
   ></p-chart>`,
   styleUrls: ['./most-confirmed-country.component.scss'],

@@ -1,1 +1,74 @@
-<p>turkey-data-list works!</p>
+<p-progressSpinner
+  class="flex align-items-center justify-content-center"
+  [style]="{ width: '250px', height: '600px' }"
+  *ngIf="dataLoaded == false"
+>
+</p-progressSpinner>
+<div *ngIf="dataLoaded == true">
+  <span
+    class="flex-initial flex align-items-center mt-3 justify-content-center bg-blue-600 font-bold text-white px-5 py-3 border-round"
+    >Türkiye İçin Tüm Covid19 Verileri</span
+  >
+
+  <div class="card">
+    <p-table
+      [responsive]="true"
+      styleClass="p-datatable-customers p-datatable-gridlines"
+      [rows]="10"
+      [paginator]="true"
+      [rowsPerPageOptions]="[10, 20, 30]"
+      [value]="turkeyDataList"
+      [exportHeader]="'customExportHeader'"
+    >
+      <ng-template pTemplate="caption">
+        <div class="flex">
+          <p-button
+            (click)="showDialog()"
+            icon="pi pi-external-link"
+            label="Verileri İndir"
+          ></p-button>
+          <p-dialog
+            header="Türkiye İçin Covid19"
+            [(visible)]="display"
+            [style]="{ width: '50vw' }"
+          >
+            <button
+              type="button"
+              pButton
+              pRipple
+              icon="pi pi-file-excel"
+              (click)="exportExcel()"
+              class="p-button-warning mr-4"
+              label="Excel Dosyası Olarak İndir"
+            ></button>
+            <button
+              type="button"
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-file-pdf"
+              (click)="exportPdf()"
+              class="p-button-success"
+              label="PDF Dosyası Olarak İndir"
+            ></button>
+          </p-dialog>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="bg-purple-600">Tarih</th>
+          <th class="bg-orange-600">Toplam Vaka</th>
+          <th class="bg-red-700">Toplam Ölüm</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td>{{ item.Date | date: "shortDate" }}</td>
+          <td>{{ item.Confirmed | number }}</td>
+          <td>{{ item.Deaths | number }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

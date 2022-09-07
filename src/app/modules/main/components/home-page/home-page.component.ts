@@ -14,13 +14,11 @@ import { Component, OnInit } from '@angular/core';
         <div class="card">
           <app-most-confirmed-country></app-most-confirmed-country>
         </div>
-
       </div>
       <div class="col-12 lg:col-6">
         <div class="card">
           <app-last-month-country-data></app-last-month-country-data>
         </div>
-
       </div>
     </div>
   `,
