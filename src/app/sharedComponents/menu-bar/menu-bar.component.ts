@@ -18,7 +18,7 @@ export class MenuBarComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-        label: 'Anasaayfa',
+        label: 'Anasayfa',
         icon: 'pi pi-home',
 
         routerLink: ['/'],
