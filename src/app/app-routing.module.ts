@@ -17,7 +17,9 @@ const routes: Routes = [
       ),
   },
   {
+    //Wild Card Route for 404 request
     path: '**',
+    pathMatch:'full',
     component: NotFoundComponent,
   },
 ];
